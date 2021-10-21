@@ -1,0 +1,31 @@
+//day 1 of joy of coding season 2
+//problem 1
+
+
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+	int n,i;
+	printf("enter the no.of array elements");
+	scanf("%d",&n);
+	int a[n+1];
+	printf("enter the elements");
+	for( i=0;i<n;i++){
+		scanf("%d",&a[i]);
+	
+	}
+	for( i=0;i<n;i++){
+		for(int j=i;j<n;j++){
+			if(a[i]==a[j]){
+				printf("array is not distint");
+				exit(0);
+			}
+		}
+		
+	
+	}
+	if(i==n){
+		printf("array is distint");
+	}
+	return 0;
+}
