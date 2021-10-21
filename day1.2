@@ -1,0 +1,48 @@
+//joy of coding season 2
+//day 1 question 2
+
+
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+	int n,i,k,m;
+	int l=0;
+	printf("enter the no.of array elements");
+	scanf("%d",&n);
+	int a[n+1],b[n+1];
+	printf("enter the elements");
+	for( i=0;i<n;i++){
+		scanf("%d",&a[i]);
+	
+	}
+	
+	for( i=0;i<n;i++){
+		k=0;
+		
+		for(m=0;m<=l;m++){
+			if(a[i]==b[l]){
+				i++;
+			}
+		
+		}
+		for(int j=i;j<n;j++){
+			if(a[i]==a[j]){
+				//printf("array is not distint");
+				k++;
+				
+			}
+		}
+		if(k!=0){
+			printf("%d's :%d",a[i],k);
+			printf("\n");
+			b[l]=a[i];
+			l++;
+		}
+		
+	
+	}
+	if(i==n){
+		printf("array is distint\n");
+	}
+	return 0;
+}
