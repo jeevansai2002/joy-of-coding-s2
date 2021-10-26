@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main(){
+	char a[30];
+	
+	printf("enter a string");
+	
+	
+		scanf("%[^\n]s",a);
+	
+	for(int i=0;a[i]!='\0';i++){
+		
+		if((a[i]=='A')||(a[i]=='B')||(a[i]=='C')||(a[i]=='D')||(a[i]=='E')||(a[i]=='F')||(a[i]=='G')||(a[i]=='H')||(a[i]=='I')||(a[i]=='J')
+			||(a[i]=='K')||(a[i]=='L')||(a[i]=='M')||(a[i]=='N')||(a[i]=='O')||(a[i]=='P')||(a[i]=='Q')||(a[i]=='R')
+			||(a[i]=='S')||(a[i]=='S')||(a[i]=='T')||(a[i]=='U')||(a[i]=='V')||(a[i]=='W')||(a[i]=='X')||(a[i]=='Y')||(a[i]=='Z')){
+			printf("%c",a[i]);
+		}
+	
+	}
+}
