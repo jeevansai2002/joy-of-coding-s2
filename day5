@@ -1,0 +1,73 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+	int top=-1;
+	int ch;
+	struct book{
+		int book_id;
+		char book_name[30];
+		char book_author[30];
+		float book_price;
+	};
+	typedef struct book books;
+	books b[5];
+	for(;;){
+		printf("chose an option \n");
+		printf("1.insert a book\n2.remove a book\n3.display book shelf\n4.quit\n");
+		scanf("%d",&ch);
+		switch(ch){
+			case 1: top++;
+				if(top<5){
+			
+					printf("enter the book id\n");
+					scanf("%d",&b[top].book_id);
+					printf("enter the book name\n");
+					scanf("%s",(b[top].book_name));
+					printf("enter the book author\n");
+					scanf("%s",b[top].book_author);
+					printf("enter the book price\n");
+					scanf("%f",&b[top].book_price);
+					break;
+					
+				}
+				if(top>4){
+					printf("book shelf is full no books can be added\n");
+				
+				}
+				break;
+			case 2:	if(top>-1){
+					printf("book removed is :%d\n%s\n%s\n%f\n\n\n",b[top].book_id , b[top].book_name , b[top].book_author , b[top].book_price);
+					top--;
+					
+					break;
+				}
+				if(top<0){
+					printf("book shelf is empty books cant be removed\n");
+				}
+				break;
+				
+				
+			case 3:	if(top<0){
+					printf("book shelf is empty\n");
+					break;
+				}
+				
+				for(int i=top;i>=0;i--){
+			
+				printf(" %d\n%s\n%s\n%f\n\n\n",b[i].book_id , b[i].book_name , b[i].book_author , b[i].book_price);
+			
+				}
+				break;
+			case 4: exit(0); break;
+				
+			
+		
+		
+		
+		}
+
+			
+	
+	}
+
+}
